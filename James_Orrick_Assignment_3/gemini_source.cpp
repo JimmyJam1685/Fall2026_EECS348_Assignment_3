@@ -1,6 +1,8 @@
 /*
 gemini_source.cpp
-Desc: a C++ program that takes commands from an input file and sorts them using a Maxheap
+Desc: a C++ program that takes commands from an input txt file
+(almost) Entirely object-oriented implementation of a MaxHeap priority queue using a binary tree structure with pointer-based nodes.
+Outputs the next email to read based on priority and date, and allows for reading and counting emails.
 Author: James Orrick
 Created 10/1/2026
 Human Collaborators: None
@@ -341,7 +343,7 @@ int main(int argc, char* argv[]) {
     EmailManager manager;
 
     if (argc > 1) {
-        
+
         // Process from command line argument file if provided
         std::ifstream file(argv[1]);
         if (file.is_open()) {
